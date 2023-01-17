@@ -3,7 +3,7 @@ public class Radio implements IRadio {
     private boolean encendido = false;
 
     // True AM, false FM
-    private boolean AM_FM = false;
+    public boolean AM_FM = false;
     private int freqAM;
     private double freqFM;
     int[] AMlist = new int[12];
@@ -32,11 +32,13 @@ public class Radio implements IRadio {
         if (AM_FM) { // si es am
             try {
                 freqAM = Integer.parseInt(freq);
+                setAMActualStation(freqAM);
             } catch (Exception e) {
             }
         } else { // si es fm
             try {
                 freqFM = Double.parseDouble(freq);
+                setFMActualStation(freqFM);
             } catch (Exception e) {
             }
         }
@@ -45,9 +47,9 @@ public class Radio implements IRadio {
     @Override
     public String getFrequence() {
         if (AM_FM) { // si es AM
-            return freqAM + "";
+            return freqAM+"";
         } else { // si es FM
-            return freqFM + "";
+            return freqFM+"";
         }
     }
 
@@ -55,17 +57,19 @@ public class Radio implements IRadio {
     public void Forward() { // Solo suma lo apropiado para cada tipo de señal
         if (AM_FM) { // Si es AM
             freqAM = freqAM + 10;
+            setAMActualStation(freqAM);
         } else { // Si es FM
             freqFM = freqFM + 0.2;
+            setFMActualStation(freqFM);
         }
     }
 
     @Override
     public void Backward() { // Solo resta lo apropiado para cada tipo de señal
         if (AM_FM) { // Si es AM
-            freqAM = freqAM + 10;
+            freqAM = freqAM - 10;
         } else { // Si es FM
-            freqFM = freqFM + 0.2;
+            freqFM = freqFM - 0.2;
         }
     }
 
