@@ -34,7 +34,7 @@ public class MainRadio extends JFrame {
         switchOff.setVisible(false);
         mainRadioStage.setVisible(false);
         setSize(722,662);
-        setResizable(true);
+        setResizable(false);
 
         //Default values
         frequenceChanger.addItem("AM");

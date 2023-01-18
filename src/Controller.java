@@ -8,7 +8,6 @@ public class Controller {
 
     /**
      * Checks the combobox changes
-     * 
      * @param combobox
      * @return
      */
@@ -71,6 +70,12 @@ public class Controller {
         }
         return false;
     }
+
+    /**
+     * Method saves a frequency given a slot int
+     * @param radio
+     * @param slot
+     */
 
     public static void saveFreq(Radio radio, int slot) {
         if (radio.AM_FM) {

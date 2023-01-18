@@ -29,6 +29,11 @@ public class Radio implements IRadio {
         return encendido;
     }
 
+    /**
+     * Sets the frequency
+     * @param freq La frecuencia la cual puede ser AM o FM, de lo contrario error.
+     * @throws Exception
+     */
     @Override
     public void setFrequence(String freq) throws Exception {
         if (AM_FM) { // si es am
