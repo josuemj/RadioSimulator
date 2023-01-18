@@ -6,14 +6,16 @@ public class Radio implements IRadio {
     public boolean AM_FM = false;
     private int freqAM;
     private double freqFM;
+
+    // Listas para almacenar las frecuencias de AM y FM respectivamente
     int[] AMlist = new int[12];
     double[] FMlist = new double[12];
 
-    // AM mult de 10, 530 a 1610
-    // FM mult de 0.2, 87.9 a 107.9
+    // AM mult de 10, de 530 a 1610
+    // FM mult de 0.2, de 87.9 a 107.9
 
     @Override
-    public void on() { // nlolol
+    public void on() {
         encendido = true;
     }
 
@@ -47,9 +49,9 @@ public class Radio implements IRadio {
     @Override
     public String getFrequence() {
         if (AM_FM) { // si es AM
-            return freqAM+"";
+            return freqAM + "";
         } else { // si es FM
-            return freqFM+"";
+            return freqFM + "";
         }
     }
 
