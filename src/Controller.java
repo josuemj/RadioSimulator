@@ -68,4 +68,24 @@ public class Controller {
         return false;
     }
 
+    public static void saveFreq (Radio radio, int slot){
+        if (radio.AM_FM){
+            if(radio.getAMSlot(slot)==0){
+                int tem = radio.getAMActualStation();
+                radio.saveAMStation(tem, slot);
+            } else{
+                int tem = radio.getAMSlot(slot);
+                radio.setAMActualStation(tem);
+            }
+        } else{
+            if(radio.getFMSlot(slot)==0){
+                double tem = radio.getFMActualStation();
+                radio.saveFMStation(tem, slot);
+            }else{
+                double tem = radio.getFMSlot(slot);
+                radio.setFMActualStation(tem);
+            }
+        }
+    }
+
 }

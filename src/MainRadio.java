@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 import java.text.DecimalFormat;
 
@@ -9,21 +8,22 @@ public class MainRadio extends JFrame {
     private JButton swithOn;
     private JPanel mainRadioStage;
     private JButton switchOff;
-    private JButton a2Button;
-    private JButton a3Button;
-    private JButton a4Button;
-    private JButton a5Button;
-    private JButton a6Button;
-    private JButton a7Button;
-    private JButton a8Button;
-    private JButton a9Button;
-    private JButton a10Button;
-    private JButton a11Button;
-    private JButton a12Button;
+    private JButton b7;
+    private JButton b8;
+    private JButton b2;
+    private JButton b9;
+    private JButton b3;
+    private JButton b4;
+    private JButton b10;
+    private JButton b5;
+    private JButton b11;
+    private JButton b6;
+    private JButton b12;
     private JButton forwardButton;
     private JButton backfardButton;
     private JComboBox frequenceChanger;
     private JLabel freNumberID;
+    private JButton b1;
     public static DecimalFormat df = new DecimalFormat("#.0");
 
     public MainRadio(){
@@ -181,6 +181,138 @@ public class MainRadio extends JFrame {
 
 
 
+                }
+            }
+        });
+        b1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,0);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
+                }
+            }
+        });
+        b2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,1);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
+                }
+            }
+        });
+        b3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,2);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
+                }
+            }
+        });
+        b4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,3);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
+                }
+            }
+        });
+        b5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,4);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
+                }
+            }
+        });
+        b6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,5);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
+                }
+            }
+        });
+        b7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,6);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
+                }
+            }
+        });
+        b8.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,7);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
+                }
+            }
+        });
+        b9.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,8);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
+                }
+            }
+        });
+        b10.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,9);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
+                }
+            }
+        });
+        b11.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,10);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
+                }
+            }
+        });
+        b12.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Controller.saveFreq(radio,11);
+                if(radio.AM_FM){
+                    freNumberID.setText(radio.getAMActualStation()+"");
+                } else{
+                    freNumberID.setText(df.format(radio.getFMActualStation()));
                 }
             }
         });
